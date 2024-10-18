@@ -1,0 +1,24 @@
+add filtro de links, ele esta puxando tudo que tem envolvido no username 
+
+exemplo: ´000felipeluiz´
+
+instagram: puxando perfil ok, puxando postagens no story, puxando postagens com comentários e chega a puxar ate postagens com curtidas, sendo assim uma boa ferramenta
+já que é possivel coletar várias informações do que o usuário gosta, musicas, cantores etc... Sendo bem utilizado em engenharia social.
+
+Outras redes sociais: Está puxando outros link que não é relacionado ao username que foi colocado, como por exemplo o `000felipeluiz` ele puxa o x de algum felipe ou luiz
+ou algum username com 000 no começo.
+
+Colocar uma pasta específica para armazenar os resultados
+
+(Algo bem diferente: Utilizar lista de username para fazer pesquisa e armazenar cada username em arquivos diferentes.)
+
+
+
+
+
+***********Como usar?************
+
+Baixe o python na sua máquina: https://www.python.org/downloads/
+Abra a pasta OSINTapp
+Vá até a pasta dist, execute o app.exe, coloque o nome de um usuário válido ,coloque para realizar a pesquisa e depois disso é so aguardar.
+Resultado em TXT se encontra na pasta OSINTapp.
