@@ -1,14 +1,18 @@
 {
   "name": "osint-pi",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "dev": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch",
     "build": "tsc"
   },
-  "dependencies": {},
   "devDependencies": {
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.5.3"
   },
-  "private": true
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
