@@ -5,12 +5,18 @@
 <title>osintpi</title>
 
     <link rel="stylesheet" href="styles/output.css">
-
-
 </head>
 <body class="font-sans antialiased dark:text-white/50">
+
+<!-- grade de background -->
+<div class="absolute inset-0 grid  z-0 grid-container"></div>
+
+
+
 <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-<img id="background" class="absolute w-screen h-full object-cover" src="assets/back.svg" alt="Background"/>
+
+
+<!--<img id="background" class="absolute w-screen h-full object-cover" src="assets/back.svg" alt="Background"/>-->
 <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
     <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
         <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
@@ -20,7 +26,7 @@
 
         </header>
 
-        <main class="-mt-12">
+        <main class="-mt-12 z-2">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-10">
                 <a id="docs-card"
                  class="flex flex-col items-start gap-6 overflow-hidden rounded-l-[45px] bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-2 ring-white/[0.05] transition-all duration-200 hover:shadow-[0_0_20px_5px_rgba(255,255,255,0.5)] hover:text-black/80 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/80 dark:hover:shadow-[0_0_25px_8px_rgba(255,255,255,0.3)] dark:focus-visible:ring-[#FF2D20]"
@@ -73,7 +79,7 @@
                     <div class="pt-3 sm:pt-5 ">
                         <h2 class="text-xl font-semibold text-black dark:text-white">Redes Sociais</h2>
 
-                        <p class="mt-4 text-sm/relaxed hover:text-black">
+                        <p class="mt-4 text-sm/relaxed  ">
                             Redes sociais podem revelar muito mais do que você imagina através de OSINT e web scraping. Que tal experimentar por conta própria? Clique aqui e realize uma pesquisa prática em redes sociais usando essas técnicas!                                    </p>
                     </div>
 
@@ -152,9 +158,33 @@
             </summary>
             <div class="flex justify-start mt-2">
                 <button
-                        onclick="ShowResearch()"
+                        onclick="DocResearch()"
                         class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
                     Documentos PDF Expostos
+                </button>
+            </div>
+        </details>
+        <details class="mt-4">
+            <summary class="cursor-pointer text-blue-600 hover:text-blue-800 transition">
+                Planilhas com dados pessoais expostas
+            </summary>
+            <div class="flex justify-start mt-2">
+                <button
+                        onclick="PDPResearch()"
+                        class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                    Planilhas de dados pessoais
+                </button>
+            </div>
+        </details>
+        <details class="mt-4">
+            <summary class="cursor-pointer text-blue-600 hover:text-blue-800 transition">
+                Lista de contatos de clientes expostas
+            </summary>
+            <div class="flex justify-start mt-2">
+                <button
+                        onclick="ContactResearch()"
+                        class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                    Listas expostas
                 </button>
             </div>
         </details>
@@ -172,6 +202,7 @@
         </div>
     </div>
 </div>
+<script src="js/background.js"></script>
 
 <script src="js/modal-rs.js"></script>
 <script src="js/modal-vulnebs.js"></script>

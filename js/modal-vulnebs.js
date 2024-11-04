@@ -34,3 +34,18 @@ class ModalVulnebs {
 }
 
 const modalVul = new ModalVulnebs('vulneb', 'vulneb-in', 'close-vulneb');
+function DocResearch() {
+    const query = encodeURIComponent('filetype:pdf|txt|docx intitle:"Confidencial"');
+    const url = `https://www.google.com/search?q=${query}`;
+    window.open(url, '_blank');
+}
+function PDPResearch() {
+    const query = encodeURIComponent('filetype:xls intext:"nome" "CPF"');
+    const url = `https://www.google.com/search?q=${query}`;
+    window.open(url, '_blank');
+}
+function ContactResearch() {
+    const query = encodeURIComponent('filetype:csv OR filetype:xls "email" "telefone"');
+    const url = `https://www.google.com/search?q=${query}`;
+    window.open(url, '_blank');
+}

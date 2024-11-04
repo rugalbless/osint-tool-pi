@@ -594,6 +594,10 @@ video {
   top: -1.25rem;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -837,6 +841,15 @@ video {
   border-width: 1px;
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-white\/20 {
+  border-color: rgb(255 255 255 / 0.2);
+}
+
 .bg-\[\#FF2D20\]\/10 {
   background-color: rgb(255 45 32 / 0.1);
 }
@@ -1063,6 +1076,11 @@ video {
   --tw-ring-color: rgb(39 39 42 / var(--tw-ring-opacity));
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .drop-shadow {
   --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1103,6 +1121,49 @@ video {
 
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito de shapes com blur */
+
+.blur-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  pointer-events: none;
+  animation: float 30s ease-in-out infinite alternate;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(99, 102, 241, 0.77);
+  top: 10%;
+  left: 15%;
+  animation-duration: 25s;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  background: #a480ff;
+  bottom: 20%;
+  right: 20%;
+  animation-duration: 35s;
+}
+
+.shape-3 {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 195, 131, 0.89);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 40s;
 }
 
 .selection\:bg-\[\#FF2D20\] *::-moz-selection {
