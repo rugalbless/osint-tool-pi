@@ -35,7 +35,7 @@ class ModalVulnebs {
 
 const modalVul = new ModalVulnebs('vulneb', 'vulneb-in', 'close-vulneb');
 function DocResearch() {
-    const query = encodeURIComponent('filetype:pdf|txt|docx intitle:"Confidencial"');
+    const query = encodeURIComponent('filetype:pdf intitle:"Confidencial" OR filetype:txt intitle:"Confidencial" OR filetype:docx intitle:"Confidencial"');
     const url = `https://www.google.com/search?q=${query}`;
     window.open(url, '_blank');
 }

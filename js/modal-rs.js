@@ -3,6 +3,9 @@ class ModalRs {
         this.openButton = document.getElementById(openButtonId);
         this.modal = document.getElementById(modalId);
         this.closeButton = document.getElementById(closeButtonId);
+        this.optionButtons = this.modal.querySelectorAll('.option-button');
+        this.selectedOption = null;
+        this.searchInput = document.getElementById('search-input');
 
         this.init();
     }
@@ -22,6 +25,12 @@ class ModalRs {
                 this.close();
             }
         });
+
+        this.optionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                this.selectOption(button);
+            });
+        });
     }
 
     open() {
@@ -31,6 +40,29 @@ class ModalRs {
     close() {
         this.modal.classList.add('hidden');
     }
+
+    selectOption(button) {
+        if (this.selectedOption) {
+            this.selectedOption.classList.remove('bg-blue-500', 'text-white');
+            this.selectedOption.classList.add('bg-gray-200', 'text-black');
+        }
+        button.classList.remove('bg-gray-200', 'text-black');
+        button.classList.add('bg-blue-500', 'text-white');
+        this.selectedOption = button;
+    }
 }
 
 const modalRs = new ModalRs('modal-rs', 'modal-rs-in', 'close-modal');
+
+function search() {
+    const selectedOption = modalRs.selectedOption;
+    const searchInput = modalRs.searchInput.value;
+
+    if (selectedOption && searchInput) {
+        const query = encodeURIComponent(`site:${selectedOption.dataset.option} comments from "${searchInput}"`);
+        const url = `https://www.google.com/search?q=${query}`;
+        window.open(url, '_blank');
+    } else {
+        alert("Por favor, selecione uma opção e digite uma pesquisa.");
+    }
+}
