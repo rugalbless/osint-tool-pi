@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch",
+    "dev": "npx tailwindcss -i css/style.css -o css/output.css --watch",
     "build": "tsc"
   },
   "devDependencies": {
